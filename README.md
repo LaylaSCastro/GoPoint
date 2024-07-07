@@ -29,7 +29,7 @@ O sistema deve permitir que o usuário consiga redefinir sua senha ao clicar na 
 O sistema deve permitir que o usuário insira uma batida ponto, para isso segue o seguinte fluxo:
 - Seleciona se o ponto é de entrada e saída
 - Clica no botão de inserir batida
-- Ao inserir batida, o sistema salva o nome do usuário e o horário e data da batida
+- Ao inserir batida, o sistema salva o nome do usuário e o horário e data da batida.
 
 ## RF005 - Visualização do histórico de ponto
 O sistema deve permitir que a pessoa consiga visualizar o histórico de pontos, com uma lista de pontos anteriores contendo informações como:
