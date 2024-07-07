@@ -44,7 +44,7 @@ O sistema deve permitir que a pessoa consiga visualizar o histórico de pontos, 
 - Criar banco de dados;
 - Criar backend do projeto;
 - Criar frontend;
-- Conectar frontend com o backend
+- Conectar frontend com o backend;
 - Fazer deploy da aplicação;
 
  *TIME*
