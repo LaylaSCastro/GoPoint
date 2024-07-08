@@ -70,12 +70,13 @@ body {
 .input {
     width: 27em;
     height: 3.7em;
-    background-color: #c4ccd733;
+    background-color: #ebedef;
     border: #c4ccd7 .11em solid;
     border-radius: .8em;
     margin: 1.64em 0 1.3em 0;
     padding: 18px;
     outline: none;
+    box-shadow: 0px 0px 15px #7575753f;
 }
 
 .input:hover {
@@ -119,7 +120,7 @@ body {
 
 .login-button {
     background-color: #2d3341;
-    height: 3.5em;
+    height: 46px;
     width: 100%;
     border: none;
     border-radius: 1.02em;
@@ -154,7 +155,13 @@ body {
     color: #2B313F;
     font-weight: 600;
     font-size: .9em;
+}
 
+.social-login:hover {
+    cursor: pointer;
+    transform: scale(102%);
+    transition: .1s;
+    color: #575757;
 }
 
 .icon {
@@ -162,6 +169,11 @@ body {
 }
 
 @media (max-width: 1050px) {
+
+    body {
+        height: 100vh;
+        width: 100vw;
+    }
 
     .logo {
         height: 47%;
@@ -236,14 +248,14 @@ body {
 
     .right-circle {
         top: 5%;
-        left: 81%;
+        left: 75%;
         width: 25vw;
     }
 
     .login-container {
         margin:0 0 0 0;
         width: 23em;
-        height: 36.8em;
+        height: 37em;
     }
 
     .login-title {
@@ -293,4 +305,57 @@ body {
     margin-right: .2em;
 }
 }
+
+@media (max-height: 430px) {
+
+    .logo-container {
+        width: 18vw;
+        height: 57vh;
+        margin: 0;
+    }
+
+    .logo {
+        height: 57vh;
+        width: 18vw;
+    }
+
+    .login-container {
+        width: 333px;
+    }
+
+    .login-title {
+        font-size: .8em;
+        margin-bottom: 1.5vh;
+    }
+
+    .inputs-container {
+        margin-top: .5vh;
+    }
+
+    .input {
+        height: 3.5em;
+        width: 25em;
+        margin-top: 1vh;
+    }
+
+    .login-button {
+        width: 25em;
+    }
+
+    .forgot-password-container, .signup-text {
+        margin-top: .5vh;
+        font-size: .75em;
+    }
+
+    .social-login {
+        font-size: .75em;
+        width: 12em;
+    }
+
+    .or-divider {
+        margin-top: 1.7vh;
+        font-size: .8em;
+    }
+ }
+
 
