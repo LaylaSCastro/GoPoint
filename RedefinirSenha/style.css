@@ -30,6 +30,14 @@ body {
     z-index: 0;
 }
 
+.ph-arrow-left {
+    top: 2.5%;
+    left: .6%;
+    position: absolute;
+    font-size: 25px;
+    color: #2d3341;
+}
+
 .master-container {
     position: absolute;
     height: 100vh;
@@ -40,7 +48,7 @@ body {
     z-index: 1;
 }
 
-.login-container {
+.resetPassword-container {
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -49,20 +57,27 @@ body {
     width: 22.5em;
 }
 
-.login-title {
+.resetPassword-title {
     width: 100%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
+    flex-direction: column;
     font-weight: 600;
     font-size: .82em;
     color: #1d1d1d;
 }
 
+.resetPassword-title h2 {
+    font-weight: 300;
+    font-size: 1.2em;
+    margin-left: 8px;
+}
+
 .inputs-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     margin-top: 1em;
 }
@@ -73,7 +88,7 @@ body {
     background-color: #ebedef;
     border: #c4ccd7 .11em solid;
     border-radius: .8em;
-    margin: 1em 0 1.3em 0;
+    margin: 1em 0 0 0;
     padding: 18px;
     outline: none;
     box-shadow: 0px 0px 15px #7575753f;
@@ -88,7 +103,7 @@ body {
     justify-content: flex-start;
 }
 
-.password-input {
+.password-input, .confirm-password-input {
     height: 3.7em;
     width: 24em;
     padding: 18px;
@@ -98,7 +113,7 @@ body {
     outline: none;
 }
 
-#togglePassword {
+#togglePassword, #toggleConfirmPassword {
     cursor: pointer;
     font-size: 18px;
     color: #889AAF;
@@ -110,87 +125,47 @@ body {
 
 }
 
-.input:focus, .password-container:focus {
-    background-color: #c4ccd75e;
-    border: #b6bdc7 .2em solid;
-    cursor: auto;
-}
-
 .input::placeholder, .password-container::placeholder {
     color: #889AAF;
     font-weight: 500;
     font-size: 1.16em;
 }
 
-.forgot-password-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    width: 100%;
-    margin-bottom: 1em;
+.bottom-text {
+    color: #464646;
+    font-size: .78em;
+    margin: .3em 0 1em .6em;
 }
 
-.forgot-password, .reset-link, .signup-text{
-    color: #889AAF;
-    font-size: .77em;
-    font-weight: 500;
-    cursor: default;
-}
-
-.reset-link, .signup-link{
-    color: #1250F3;
-    cursor: pointer;
-    margin-left: .1em;
-}
-
-.login-button {
+.resetPassword-button {
     background-color: #2d3341;
     height: 46px;
     width: 100%;
     border: none;
     border-radius: 1.02em;
     color: #fff;
+    margin-top: 1.8em;
 }
 
-.login-button:hover {
+.resetPassword-button:hover {
     background-color: #1250F3;
     cursor: pointer;
     transition: .2s;
     transform: scale(98%);
 }
 
-.or-divider {
-    color: #747474;
+.signup-text{
+    color: #889AAF;
+    font-size: .77em;
     font-weight: 500;
-    font-size: .95em;
-    margin-top: 2.1em;
+    cursor: default;
+    margin-top: 4em;
 }
 
-.social-login-container {
-    display: flex;
-    justify-content: space-between;
-    width: 14em;
-    margin: 1.2em 0 1.5em 0;
-}
-
-.social-login {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #2B313F;
-    font-weight: 600;
-    font-size: .9em;
-}
-
-.social-login:hover {
+.signup-link{
+    color: #1250F3;
     cursor: pointer;
-    transform: scale(102%);
-    transition: .1s;
-    color: #575757;
-}
-
-.icon {
-    margin-right: .2em;
+    margin-left: .1em;
 }
 
 @media (max-width: 1050px) {
@@ -210,7 +185,7 @@ body {
         transform: translateX(-50%);
     }
 
-    .login-container {
+    .resetPassword-container {
         transition: .5s;
         margin-left: 8%;
     }
@@ -239,7 +214,7 @@ body {
         transform: translateX(0%);
     }
 
-    .login-container {
+    .resetPassword-container {
     margin: 0;
     }
 
@@ -272,18 +247,18 @@ body {
     }
 
     .right-circle {
-        top: 5%;
+        top: 3%;
         left: 75%;
         width: 25vw;
     }
 
-    .login-container {
+    .resetPassword-container {
         margin:0 0 0 0;
         width: 23em;
         height: 37em;
     }
 
-    .login-title {
+    .resetPassword-title {
         font-size: .921em;
 }
 
@@ -293,42 +268,22 @@ body {
     }
 
     .input {
-        width: 27.6em;
+        width: 22.8em;
     }
 
-    .forgot-password-container {
-        margin: 0.6em 0 3.5em 0;
+    .signup-text{
+        color: #889AAF;
+        font-size: .83em;
+        font-weight: 500;
     }
 
-.forgot-password, .reset-link, .signup-text{
-    color: #889AAF;
-    font-size: .83em;
-    font-weight: 500;
+    .resetPassword-button {
+        height: 3.5em;
+        width: 83%;
+        font-size: 1em;
+        margin-top: 3em;
 }
 
-.login-button {
-    height: 3.5em;
-    width: 82%;
-    font-size: 1em;
-}
-
-.or-divider {
-    margin-top: 1.6em;
-}
-
-.social-login-container {
-    width: 16.5em;
-    margin: 2.2em 0 4.2em 0;
-}
-
-.social-login {
-    font-size: 1.03em;
-
-}
-
-.icon {
-    margin-right: .2em;
-}
 }
 
 @media (max-height: 430px) {
@@ -348,9 +303,13 @@ body {
         width: 333px;
     }
 
-    .login-title {
-        font-size: .8em;
+    .resetPassword-title {
+        font-size: .7em;
         margin-bottom: 1.5vh;
+    }
+
+    .resetPassword-title h2 {
+        width: 340px;
     }
 
     .inputs-container {
@@ -358,27 +317,18 @@ body {
     }
 
     .input {
-        height: 3.5em;
-        width: 25em;
-        margin-top: 1vh;
+        width: 22.7em;
+        margin-top: 0;
     }
 
-    .login-button {
+    .resetPassword-button {
         width: 25em;
+        margin-top: .5em;
     }
 
-    .forgot-password-container, .signup-text {
-        margin-top: .5vh;
+    .signup-text {
+        margin-top: 2vh;
         font-size: .75em;
     }
 
-    .social-login {
-        font-size: .75em;
-        width: 12em;
-    }
-
-    .or-divider {
-        margin-top: 1.7vh;
-        font-size: .8em;
-    }
  }

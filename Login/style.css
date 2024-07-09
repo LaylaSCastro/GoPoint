@@ -140,7 +140,7 @@ body {
 .reset-link, .signup-link{
     color: #1250F3;
     cursor: pointer;
-    margin-left: .1em;
+    margin-left: .2em;
 }
 
 .login-button {
