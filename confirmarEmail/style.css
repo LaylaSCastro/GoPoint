@@ -195,7 +195,7 @@ body {
 @media (max-width: 490px) {
     
     .logo-container {
-        width: 386px;
+        width: 360px;
         margin-bottom: 36px;
     }
     
@@ -209,7 +209,7 @@ body {
 
     .right-circle {
         top: 3%;
-        left: 75%;
+        left: 67%;
         width: 25vw;
     }
 
@@ -221,7 +221,7 @@ body {
 
     .send-email-title {
         font-size: .921em;
-}
+    }
 
     .signup-text{
         color: #889AAF;
