@@ -145,6 +145,9 @@ body {
 .icon {
     margin-right: .2em;
 }
+.PontoCadastro{
+    width: 100%;
+}
 @media (max-width: 1050px) {
     .logo {
         height: 47%;
