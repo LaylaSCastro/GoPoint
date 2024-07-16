@@ -10,7 +10,7 @@ body {
 }
 .logo {
     height: 47%;
-    width: 70%;
+    width: 100%;
     margin-top: 40%;
 }
 .left-circle {
@@ -24,12 +24,12 @@ body {
     height: 30vh;
     position: absolute;
     top: 65%;
-    left: 94%;
+    left: 91.1%;
     z-index: 0;
 }
 .master-container {
     position: absolute;
-    height: 100vh;
+    height: 87vh;
     width: 100vw;
     display: flex;
     align-items: center;
@@ -43,7 +43,7 @@ body {
     flex-direction: column;
     margin: 7em 0 0 15%;
     width: 22.5em;
-    height: 28.5em;
+    height: 30.8em;
 }
 .signup-title {
     width: 100%;
@@ -54,44 +54,79 @@ body {
     font-size: .82em;
     color: #1d1d1d;
 }
+
 .inputs-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: .9em;
+    margin-top: 1em;
 }
+
 .input {
     width: 27em;
-    height: 1em;
-    background-color: #c4ccd733;
+    height: 3.7em;
+    background-color: #ebedef;
     border: #c4ccd7 .11em solid;
     border-radius: .8em;
-    margin: 1.2em 0 .5em 0;
+    margin: 1em 0 1.3em 0;
     padding: 18px;
-    outline-color: transparent;
+    outline: none;
+    box-shadow: 0px 0px 15px #7575753f;
 }
-.input::placeholder {
+
+.password-container {
+    height: 3.25em;
+    width: 22.63em;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.password-input {
+    height: 3.7em;
+    width: 24em;
+    padding: 18px;
+    margin-right: 7px;
+    background: none;
+    border: transparent;
+    outline: none;
+}
+
+#togglePassword {
+    cursor: pointer;
+    font-size: 18px;
+    color: #889AAF;
+}
+
+.input:hover, .password-container:hover {
+    background-color: #c4ccd75e;
+    cursor: auto;
+
+}
+
+.input::placeholder, .password-input::placeholder {
     color: #889AAF;
     font-weight: 500;
-    font-size: .8em;
+    font-size: 1.16em;
 }
+
 .signup-button {
     background-color: #2d3341;
-    height: 3.5em;
+    height: 3.6em;
     width: 100%;
-    font-size: .7em;
+    font-size: .8em;
     border: none;
     border-radius: 1.02em;
     color: #fff;
-    margin-top: 2em;
-    margin-bottom: -1.5em;
+    margin-top: 1.8em;
+    margin-bottom: 2em;
 }
 .or-divider {
     color: #747474;
     font-weight: 500;
-    font-size: .8em;
-    margin-top: 2.5em;
+    font-size: .85em;
 }
 .social-signup-container {
     display: flex;
@@ -105,7 +140,7 @@ body {
     justify-content: center;
     color: #2B313F;
     font-weight: 600;
-    font-size: .8em;
+    font-size: .9em;
 }
 .icon {
     margin-right: .2em;
