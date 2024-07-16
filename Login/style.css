@@ -142,7 +142,9 @@ body {
     cursor: pointer;
     margin-left: .2em;
 }
-
+.PontoLogin {
+    width: 100%;
+}
 .login-button {
     background-color: #2d3341;
     height: 46px;
