@@ -144,6 +144,8 @@ body {
 }
 .PontoLogin {
     width: 100%;
+    text-decoration: none;
+    color: #F5F5F5;
 }
 .login-button {
     background-color: #2d3341;
