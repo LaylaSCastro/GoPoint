@@ -50,11 +50,11 @@ Contribuições são bem-vindas! Se você encontrar algum problema ou tiver suge
 
 - **UI/UX:** 🎨
   - Camilly Victoria
-  - Camilly Cristina
+  - Camilly Christine
 
 - **Frontend:** 💻
   - Camilly Victoria
-  - Camilly Cristina
+  - Camilly Christine
   - Layla Castro
   - Ramon Miller
   - Thailanny Martins
