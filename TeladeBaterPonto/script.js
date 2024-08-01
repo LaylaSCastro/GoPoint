@@ -71,3 +71,11 @@ document.addEventListener('mouseup', () => {
     function hideMessage() {
         message.style.display = 'none';
     }
+const nameMenu = document.querySelector("nameMenu")
+const endpoint = ""
+fetch(endpoint)
+.then(res=> res.json())
+.then(dados=> {
+   console.log(dados)
+   ola.innerHTML = dados.nome
+})

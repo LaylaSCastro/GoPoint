@@ -94,6 +94,10 @@ body {
     outline: none;
 }
 
+::-ms-reveal {
+    display: none;
+}
+
 #togglePassword {
     cursor: pointer;
     font-size: 18px;

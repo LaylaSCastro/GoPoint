@@ -15,11 +15,12 @@ document.getElementById('togglePassword').addEventListener('click', function (e)
 });
 let email = document.querySelector('.email')
 let senha = document.querySelector('.password')
-  
 
-const btn = document.querySelector('#btn')
-btn.addEventListener('click',()=>{
-  const a = fetch('http://omega.ceuma.edu.br:4000/api/usuarios/login',{
+const btn = document.querySelector('#btn');
+
+if (btn) {-
+  btn.addEventListener('click', () => {
+    const a = fetch('http://omega.ceuma.edu.br:4000/api/usuarios/login',{
     headers: {
         'Content-Type': 'application/json',
     },
@@ -31,4 +32,10 @@ btn.addEventListener('click',()=>{
     }).then((response)=>{
         console.log("Resultado: ",response)
     })
-})
+  });
+} else {
+  console.error("Elemento .login-button não encontrado.");
+}
+
+
+
