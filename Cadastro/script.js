@@ -1,31 +1,30 @@
-    let nome = document.querySelector('.name')
-    let email = document.querySelector('.email')
-    let senha = document.querySelector('.password-input')
+let nome = document.querySelector('.name')
+let email = document.querySelector('.email')
+let senha = document.querySelector('.password-input')
   
 
 const btn = document.querySelector('#btn')
 
-btn.addEventListener('click', async  (e)=>{
+btn.addEventListener('click', (e) => {
     e.preventDefault()
-    await fetch('http://omega.ceuma.edu.br:4000/api/usuarios/cadastro',{
-    headers: {
-        'Accept': 'application/xml, text/plain, text/html',
-        'Content-Type': 'application/json;charset=UTF-8'
-    },
-    mode: 'no-cors',
-    method:'POST',
-    body: JSON.stringify({
-            nome: nome.value,
-            email: email.value,
-            senha: senha.value,
-        }),
-    }).then((response)=>{
-        console.log("Resultado: ", response)
-        return response
-    }).catch(err => {
-        console.log(err)
-    }) 
-
+    console.log(JSON.stringify({
+        nome: nome.value,
+        email: email.value,
+        senha: senha.value,
+    }))
+     fetch("http://omega.ceuma.edu.br:4000/api/usuarios/cadastro",{
+     headers: {
+         'Content-Type': 'application/json',
+     },
+     method:'POST',
+     body: JSON.stringify({
+         nome: nome.value,
+         email: email.value,
+         senha: senha.value,
+     }),
+     }).then((response)=>{
+         console.log("Resultado: ", response)
+     })
 })
 
 
@@ -39,9 +38,9 @@ btn.addEventListener('click', async  (e)=>{
 // }
 
 
-    const togglePassword = document.getElementById('togglePassword')
+const togglePassword = document.getElementById('togglePassword')
 
-    togglePassword.addEventListener('click', function (e) {
+togglePassword.addEventListener('click', function (e) {
 
     const password = document.querySelector('.password-input');
     const type = password.getAttribute('type') === 'password' ? 'text' : 'password';

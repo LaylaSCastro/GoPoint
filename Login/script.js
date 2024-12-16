@@ -14,17 +14,18 @@ document.getElementById('togglePassword').addEventListener('click', function (e)
     this.classList = type === 'password' ? 'ph ph-eye-closed' : 'ph ph-eye';
 });
 let email = document.querySelector('.email')
-let senha = document.querySelector('.password')
+let senha = document.querySelector(".password-input");
 
-const btn = document.querySelector('#btn');
+const btn = document.querySelector(".login-button");
 
-if (btn) {-
-  btn.addEventListener('click', () => {
-    const a = fetch('http://omega.ceuma.edu.br:4000/api/usuarios/login',{
-    headers: {
+if (btn) {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    fetch("http://omega.ceuma.edu.br:4000/api/usuarios/login", {
+      headers: {
         'Content-Type': 'application/json',
     },
-    method:'GET',
+    method:'POST',
     body: JSON.stringify({
         email: email.value,
         senha: senha.value,
